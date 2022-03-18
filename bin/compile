@@ -21,3 +21,7 @@ find $BUILD_DIR -maxdepth $FIND_DEPTH
 
 echo "-----> Contents of CACHE_DIR (depth $FIND_DEPTH)"
 find $CACHE_DIR -maxdepth $FIND_DEPTH
+
+if [ -f $BUILD_DIR/package.json ]; then
+  yarn install
+end
