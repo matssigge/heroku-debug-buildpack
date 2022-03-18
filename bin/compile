@@ -1,0 +1,20 @@
+#!/bin/bash
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
+
+echo "-----> Folders"
+echo BUILD_DIR: $BUILD_DIR
+echo CACHE_DIR: $CACHE_DIR
+echo ENV_DIR: $ENV_DIR
+
+echo "-----> Working dir"
+pwd
+
+if [ -z ${FIND_DEPTH+x} ]; then
+  FIND_DEPTH=2
+fi
+
+echo "-----> Contents of BUILD_DIR (depth $FIND_DEPTH)"
+find . -depth $FIND_DEPTH

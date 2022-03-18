@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Debugger helper"
+exit 0
