@@ -12,6 +12,11 @@ echo ENV_DIR: $ENV_DIR
 echo "-----> Working dir"
 pwd
 
+if [ -f $BUILD_DIR/package.json ]; then
+  echo "Stupidly running yarn install"
+  yarn install
+fi
+
 if [ -z ${FIND_DEPTH+x} ]; then
   FIND_DEPTH=2
 fi
@@ -22,6 +27,6 @@ find $BUILD_DIR -maxdepth $FIND_DEPTH
 echo "-----> Contents of CACHE_DIR (depth $FIND_DEPTH)"
 find $CACHE_DIR -maxdepth $FIND_DEPTH
 
-if [ -f $BUILD_DIR/package.json ]; then
-  yarn install
-fi
+env
+
+echo $PATH
