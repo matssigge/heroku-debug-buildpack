@@ -24,4 +24,4 @@ find $CACHE_DIR -maxdepth $FIND_DEPTH
 
 if [ -f $BUILD_DIR/package.json ]; then
   yarn install
-end
+fi
