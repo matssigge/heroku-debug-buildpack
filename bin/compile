@@ -17,4 +17,7 @@ if [ -z ${FIND_DEPTH+x} ]; then
 fi
 
 echo "-----> Contents of BUILD_DIR (depth $FIND_DEPTH)"
-find $BUILD_DIR  -maxdepth $FIND_DEPTH
+find $BUILD_DIR -maxdepth $FIND_DEPTH
+
+echo "-----> Contents of CACHE_DIR (depth $FIND_DEPTH)"
+find $CACHE_DIR -maxdepth $FIND_DEPTH
